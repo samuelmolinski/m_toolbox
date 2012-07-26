@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>formValidation</title>
+		<meta name="description" content="" />
+		<meta name="author" content="Samuel" />
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and
+		delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		<div>
+			<header>
+				<h1>formValidation</h1>
+			</header>
+			<nav>
+				<p>
+					<a href="/">Home</a>
+				</p>
+				<p>
+					<a href="/contact">Contact</a>
+				</p>
+			</nav>
+
+			<div>
+				<form id="frase-form" action="/site_uc/participe/frase" method="post">
+					<input name="Frase[imagem]" id="Frase_imagem" type="hidden" />
+					<div class="campo-frase">
+						<h3 class="guia">Escreva a sua frase.</h3>
+						<textarea cols="50" rows="3" onkeyup="progreso_tecla(this)" name="Frase[frase]" id="Frase_frase"></textarea>
+						<div id="progreso">
+							(0 / 200)
+						</div>
+					</div>
+					<div class="trataerro">
+						<div id="frase-form_es_" class="errorSummary">
+							<h5>Opa, deu erro. Veja abaixo:</h5>
+							<ul></ul>
+						</div>
+						<!---->
+					</div>
+			</div>
+			<div class="login">
+				<img src="http://192.168.0.22/site_uc/images/cadastrar.png" alt="Cadastre-se e participe do solteio!"/>
+				<p class="subTitle">
+					Escreva seu nome como você quer
+					<br/>
+					ver escrito na lata.
+				</p>
+				<input onfocus="if(this.value==&quot;Nome na lata (max: 8 letras)&quot;){this.value=&quot;&quot;};" onblur="if(this.value==&quot;&quot;){this.value=&quot;Nome na lata (max: 8 letras)&quot;};" value="SuperSam2" maxlength="8" name="Frase[nomeNaLata]" id="Frase_nomeNaLata" type="text" />
+				<input onfocus="if(this.value==&quot;Nome&quot;){this.value=&quot;&quot;};" onblur="if(this.value==&quot;&quot;){this.value=&quot;Nome&quot;};" value="Samuel" name="Frase[nome]" id="Frase_nome" type="text" maxlength="255" />
+				<input onfocus="if(this.value==&quot;Sobrenome&quot;){this.value=&quot;&quot;};" onblur="if(this.value==&quot;&quot;){this.value=&quot;Sobrenome&quot;};" value="Molinski" name="Frase[sobrenome]" id="Frase_sobrenome" type="text" />
+				<input onfocus="if(this.value==&quot;E-mail&quot;){this.value=&quot;&quot;};" onblur="if(this.value==&quot;&quot;){this.value=&quot;E-mail&quot;};" value="samuel@cabanacriacao.com" name="Frase[email]" id="Frase_email" type="text" maxlength="255" />
+				<input onfocus="if(this.value==&quot;Data Nascimento (dd/mm/aaaa)&quot;){this.value=&quot;&quot;};" onblur="if(this.value==&quot;&quot;){this.value=&quot;Data Nascimento (dd/mm/aaaa)&quot;};" value="12/01/1982" name="Frase[dataNascimento]" id="Frase_dataNascimento" type="text" />
+				<input onfocus="if(this.value==&quot;Cidade&quot;){this.value=&quot;&quot;};" onblur="if(this.value==&quot;&quot;){this.value=&quot;Cidade&quot;};" value="Rio de Janeiro" name="Frase[cidade]" id="Frase_cidade" type="text" />
+				<input onfocus="if(this.value==&quot;Estado&quot;){this.value=&quot;&quot;};" onblur="if(this.value==&quot;&quot;){this.value=&quot;Estado&quot;};" value="RJ" name="Frase[estado]" id="Frase_estado" type="text" />
+				<input onfocus="if(this.value==&quot;Tel (55) 5555-5555&quot;){this.value=&quot;&quot;};" onblur="if(this.value==&quot;&quot;){this.value=&quot;Tel (55) 5555-5555&quot;};" value="(12) 3456-7890" name="Frase[telefone]" id="Frase_telefone" type="text" />
+				<input onfocus="if(this.value==&quot;Cel (55) 5555-5555&quot;){this.value=&quot;&quot;};" onblur="if(this.value==&quot;&quot;){this.value=&quot;Cel (55) 5555-5555&quot;};" value="(12) 3456-7890" name="Frase[celular]" id="Frase_celular" type="text" />
+				<div class="termoaceite">
+					<h5>
+					<input id="ytFrase_aceite" type="hidden" value="0" name="Frase[aceite]" />
+					<input value="1" name="Frase[aceite]" id="Frase_aceite" type="checkbox" />
+					Li e aceito o <a href="http://192.168.0.22/site_uc/participe/regulamento">regulamento</a>.</h5>
+				</div>
+
+				<img id="submitFake" src="http://192.168.0.22/site_uc/images/enviar.png" alt="submit" />
+				<input id="submitReal" type="submit" name="yt0" value="OK" />
+			</div>
+
+			<!--<div class="banner"><script language="javascript"
+			type="text/javascript">OAS_AD('Middle1');</script></div>-->
+			</form>
+		</div><!-- form -->
+		</div>
+
+		<footer>
+			<p>
+				&copy; Copyright  by Samuel Molinski
+			</p>
+		</footer>
+		</div>
+	</body>
+</html>

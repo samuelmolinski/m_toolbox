@@ -1,0 +1,458 @@
+
+@imgPath: "../img";
+
+
+.insetShadow (@padding) {
+	padding: @padding;
+	background: #FFFFFF;
+	box-shadow: 2px 2px 13px rgba(0, 0, 0, .5) inset;
+}
+
+a.jqTransformCheckbox {
+	.insetShadow (0);
+	vertical-align: middle;
+	height: 21px;
+	width: 21px;
+	display: block;
+}
+
+table.jqTransformTextarea {
+	td#jqTransformTextarea-tr {
+		background: url('@{imgPath}/textarea/textarea_tr.gif') no-repeat top left;
+	}
+
+	td#jqTransformTextarea-bl {
+		background: url('@{imgPath}/textarea/textarea_bl.gif') no-repeat top left;
+	}
+
+	td#jqTransformTextarea-ml {
+		background: url('@{imgPath}/textarea/textarea_ml.gif') repeat-y top left;
+	}
+
+	td#jqTransformTextarea-bm {
+		background: url('@{imgPath}/textarea/textarea_bm.gif') repeat-x top left;
+	}
+
+	td {
+		font-size: 1px;
+		line-height: 1px;
+		width: 5px;
+		height: 5px;
+		margin: 0;
+		padding: 0;
+	}
+
+	td#jqTransformTextarea-mm {
+		background: url('@{imgPath}/textarea/textarea-mm.gif') repeat;
+		textarea {
+			font-size: 12px;
+			line-height: 16px;
+		}
+	}
+
+	.jqTransformSafariTextarea {
+		textarea {
+			background: none;
+			position: absolute;
+			top: -10px;
+			left: -10px;
+			padding: 10px 10px 10px 10px;
+			resize: none;
+		}
+
+		div {
+			position: relative;
+			overflow: hidden;
+			border: 0px solid red;
+		}
+	}
+
+	textarea {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		background: none;
+	}
+
+	td#jqTransformTextarea-tl {
+		background: url('@{imgPath}/textarea/textarea_tl.gif') no-repeat top left;
+	}
+
+	td#jqTransformTextarea-tm {
+		background: url('@{imgPath}/textarea/textarea_tm.gif') repeat-x top left;
+	}
+
+	td#jqTransformTextarea-br {
+		background: url('@{imgPath}/textarea/textarea_br.gif') no-repeat top left;
+	}
+
+	td#jqTransformTextarea-mr {
+		background: url('@{imgPath}/textarea/textarea_mr.gif') repeat-y top left;
+	}
+}
+
+table.jqTransformTextarea-focus {
+	td#jqTransformTextarea-tr {
+		background-position: 0px -10px;
+	}
+
+	td#jqTransformTextarea-bl {
+		background-position: 0px -10px;
+	}
+
+	td#jqTransformTextarea-ml {
+		background-position: -10px 0px;
+	}
+
+	td#jqTransformTextarea-bm {
+		background-position: 0px -10px;
+	}
+
+	td#jqTransformTextarea-mm {
+		background-image: url('@{imgPath}/textarea/textarea-mm-focus.gif');
+	}
+
+	td#jqTransformTextarea-tl {
+		background-position: 0px -10px;
+	}
+
+	td#jqTransformTextarea-tm {
+		background-position: 0px -10px;
+	}
+
+	td#jqTransformTextarea-br {
+		background-position: 0px -10px;
+	}
+
+	td#jqTransformTextarea-mr {
+		background-position: -10px 0px;
+	}
+}
+
+* + html {
+	.jqTransformInputInner {
+		div {
+			input {
+				padding: 6px 0 0 0;
+				margin-left: -10px;
+				height: 24px;
+			}
+		}
+	}
+
+	button.jqTransformButton {
+		height: 33px;
+	}
+}
+
+.jqTransformSelectWrapper {
+	width: 45px;
+	position: relative;
+	height: 31px;
+	background: url('@{imgPath}/select_left.gif') no-repeat top left;
+	float: left;
+	ul {
+		position: absolute;
+		width: 43px;
+		top: 30px;
+		left: 0px;
+		list-style: none;
+		background-color: #FFF;
+		border: solid 1px #CCC;
+		display: none;
+		margin: 0px;
+		padding: 0px;
+		height: 150px;
+		overflow: auto;
+		overflow-y: auto;
+		z-index: 10;
+		a {
+			display: block;
+			padding: 5px;
+			text-decoration: none;
+			color: #333;
+			background-color: #FFF;
+			font-size: 12px;
+		}
+
+		a.selected {
+			background: #EDEDED;
+			color: #333;
+		}
+	}
+
+	div {
+		span {
+			font-size: 12px;
+			float: none;
+			position: absolute;
+			white-space: nowrap;
+			height: 31px;
+			line-height: 15px;
+			padding: 8px 0 0 7px;
+			overflow: hidden;
+			cursor: pointer;
+		}
+	}
+
+	a.jqTransformSelectOpen {
+		display: block;
+		position: absolute;
+		right: 0px;
+		width: 31px;
+		height: 31px;
+		background: url('@{imgPath}/select_right.gif') no-repeat center center;
+	}
+}
+
+.jqTransformRadioWrapper {
+	float: left;
+	display: block;
+	margin: 0px 4px;
+}
+
+.jqTransformRadio {
+	background: transparent url('@{imgPath}/radio.png') no-repeat center top;
+	vertical-align: middle;
+	height: 26px;
+	width: 26px;
+	display: block;
+	
+	&.jqTransformChecked {
+		background: transparent url('@{imgPath}/radio.png') no-repeat center bottom;
+	}
+}
+
+.jqTransformInputWrapper {
+	background: transparent url('@{imgPath}/input/input_text_left.gif') no-repeat left top;
+	height: 31px;
+	padding: 0px;
+	float: left;
+}
+
+.jqTransformHidden {
+	display: none;
+}
+
+.jqTransformSafari {
+	.jqTransformInputInner {
+		div {
+			position: relative;
+			overflow: hidden;
+			margin: 0px 8px;
+			input {
+				background-color: none;
+				position: absolute;
+				top: -10px;
+				left: -2px;
+				height: 42px;
+				padding-left: 4px;
+			}
+		}
+	}
+}
+
+.jqTransformInputInner {
+	background: transparent url('@{imgPath}/input/input_text_right.gif') no-repeat top right;
+	padding: 0px;
+	margin: 0px;
+	div {
+		height: 31px;
+		margin: 0px 0px 0px 8px;
+		input {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 12px;
+			line-height: 18px;
+			vertical-align: middle;
+			height: 31px;
+			color: #404040;
+			border: none;
+			padding: 8px 0px 0px 0px;
+			margin: 0px;
+			background: transparent;
+		}
+	}
+}
+
+
+button.jqTransformButton_hover {
+	span {
+		background-position: right -33px;
+		span {
+			background-position: left -33px;
+		}
+	}
+}
+
+#respond {
+	#commentform {
+		.jqTransformCheckboxWrapper {
+			input#subscribe {
+				display: none;
+			}
+		}
+	}
+}
+
+.jqTransformInputWrapper_focus {
+	background-position: left -62px;
+	div.jqTransformInputInner {
+		background-position: right -62px;
+	}
+}
+
+button.jqTransformButton {
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	overflow: visible;
+	font-family: Arial;
+	span {
+		background: transparent url('@{imgPath}/btn_right.gif') no-repeat right top;
+		display: block;
+		float: left;
+		padding: 0px 4px 0px 0px;
+		margin: 0px;
+		height: 33px;
+		span {
+			background: transparent url('@{imgPath}/btn_left.gif') no-repeat top left;
+			color: #333;
+			padding: 8px 4px 0px 8px;
+			font-weight: normal;
+			font-size: 12px;
+			line-height: 13px;
+			display: block;
+			text-decoration: none;
+			height: 33px;
+		}
+	}
+}
+
+a.jqTransformChecked {
+	background-color: transparent;
+	background-image: url('../images/x.png');
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+span.jqTransformCheckboxWrapper {
+	display: block;
+	float: left;
+	margin: -3px 1em 0 0; 
+}
+
+table.jqTransformTextarea-hover {
+	td#jqTransformTextarea-tr {
+		background-position: 0px -5px;
+	}
+
+	td#jqTransformTextarea-bl {
+		background-position: 0px -5px;
+	}
+
+	td#jqTransformTextarea-ml {
+		background-position: -5px 0px;
+	}
+
+	td#jqTransformTextarea-bm {
+		background-position: 0px -5px;
+	}
+
+	td#jqTransformTextarea-mm {
+		background-image: url('@{imgPath}/textarea/textarea-mm-hover.gif');
+	}
+
+	td#jqTransformTextarea-tl {
+		background-position: 0px -5px;
+	}
+
+	td#jqTransformTextarea-tm {
+		background-position: 0px -5px;
+	}
+
+	td#jqTransformTextarea-br {
+		background-position: 0px -5px;
+	}
+
+	td#jqTransformTextarea-mr {
+		background-position: -5px 0px;
+	}
+}
+
+.jqTransformInputWrapper_hover {
+	background-position: left -31px;
+	div.jqTransformInputInner {
+		background-position: right -31px;
+	}
+}
+
+* + button.jqTransformButton {
+	span {
+		span {
+			height: 25px;
+		}
+	}
+}
+
+button.jqTransformButton_click {
+	span {
+		background-position: right -66px;
+		span {
+			background-position: left -66px;
+		}
+	}
+}
+
+.jqTransformSelectWrapper ul a:hover , .jqTransformSelectWrapper ul a.selected:hover {
+	background: #3582c4;
+	color: #fff;
+}
+
+*:first-child + html {
+	button.jqTransformButton[type] {
+		width: 1;
+	}
+}
+
+form.jqtransformdone {
+	label {
+		margin-top: 4px;
+		margin-right: 8px;
+		display: block;
+		float: left;
+	}
+
+	div.rowElem {
+		clear: both;
+		padding: 4px 0px;
+	}
+}
+
+* {
+	html {
+		.jqTransformInputInner {
+			div {
+				input {
+					padding: 6px 0 0 0;
+					margin: 0 0 0 -8px;
+					height: 24px;
+				}
+			}
+		}
+
+		button.jqTransformButton {
+			height: 33px;
+		}
+	}
+
+	button.jqTransformButton {
+		span {
+			span {
+				height: 25px;
+			}
+		}
+	}
+}
+
