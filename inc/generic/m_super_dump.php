@@ -80,7 +80,7 @@
 		if ('bool' == $type) {
 			$colorType = 'Green';
 		} elseif ('string' == $type) {
-			$colorType = 'DarkOrange';
+			$colorType = 'DimGrey';
 		} elseif ('array' == $type) {
 			$colorType = 'DarkOrchid';
 		} elseif ('object' == $type) {
