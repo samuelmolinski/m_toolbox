@@ -1,7 +1,7 @@
 <?php
 
-	require_once ('class-Utility.php');
-	require_once ('class-YouTubeVideo.php');
+	require_once ('m_class-Utility.php');
+	require_once ('m_class-YouTubeVideo.php');
 	//require_once ('super_dump.php');
 
 	class YouTubeChannel {
@@ -181,7 +181,9 @@
 		 */
 		private function build_channel_query() {
 			$base = 'http://gdata.youtube.com/feeds/api/';
-			$pageCode = $this->attr['pageCode'];
+			if (@$this->attr['pageCode']) {
+				$pageCode = $this->attr['pageCode'];
+			}
 			
 			if (!$this->attr['orderFix']) {
 				//sample: http://gdata.youtube.com/feeds/api/users/UCqAv9shn1FV316tmGI-Tzkg/uploads?start-index=1&max-results=50&alt=json
@@ -279,7 +281,7 @@
 		 * This fix is simple but may slow down pages until Google/Youtube fixes the real problem.
 		 */
 		private function orderFix() {
-			if ($this->attr['enablePages'] && !$pageCode) {
+			if (@$this->attr['enablePages'] && @!$pageCode) {
 				if($this->attr['page']) {
 					$index = $this->attr['page'] * $this->attr['maxResult'];
 					//d($index);
@@ -292,8 +294,8 @@
 		}
 		
 		private function parseVideos() {
-			$feed = $this->attr['channel']->feed->entry;
-			$entry = $this->attr['channel']->entry;
+			$feed = @$this->attr['channel']->feed->entry;
+			$entry = @$this->attr['channel']->entry;
 			if($feed){
 				if(is_array($feed)) {						
 					foreach ($feed as $v) {

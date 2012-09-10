@@ -1,6 +1,6 @@
 <?php
 
-	require_once ('class-Utility.php');
+	require_once ('m_class-Utility.php');
 	//require_once ('super_dump.php');
 
 	class YouTubeVideo {
@@ -112,8 +112,8 @@
 			$this->attr['dateMod'] = $v->updated->{'$t'};
 			$this->attr['title'] = $v->title->{'$t'};
 			//$entry['content'] = $v->content->{'$t'};
-			$this->attr['keywords'] = $v->{'media$group'}->{'media$keywords'}->{'$t'};
-			$this->attr['description'] = $v->{'media$group'}->{'media$description'}->{'$t'};
+			$this->attr['keywords'] = @$v->{'media$group'}->{'media$keywords'}->{'$t'};
+			$this->attr['description'] = @$v->{'media$group'}->{'media$description'}->{'$t'};
 			//$entry['veiws'] = (string)$simpleXMLObj->statistics->attributes()->viewcount;
 			$this->attr['cat'] = array();
 			$this->attr['css'] = array();

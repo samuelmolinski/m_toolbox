@@ -44,9 +44,9 @@
 		$type = get_type($var);
 		$colorType = get_type_color($type);
 		
-		echo "<div class='inspect' style='background-color:#FFF; overflow:visible;'><pre><span style='color:$colorVar'>";
+		echo "<div class='m_inspect' style='background-color:#FFF; overflow:visible;'><pre><span style='color:$colorVar'>";
 		echo $label;
-		echo "</span> = <span style='color:$colorType'>";
+		echo "</span> = <span class='subDump' style='color:$colorType'>";
 		if ($type == 'string') {
 			print_r(htmlspecialchars($var));
 		} else {
