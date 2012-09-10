@@ -31,13 +31,25 @@
 	function currentURI() {
 		return hostURI() . $_SERVER["REQUEST_URI"];
 	}
+	/*
+	 * returns the base uri shown in the uri (strips parameters)
+	 * for example, "https://grs.ggle.com/forum/help.php?fromgroups#!forum/yiimdbs"
+	 * would return "https://grs.ggle.com/forum/help.php"
+	 * 
+	 */
 
 	function currentBaseURI() {
 		$base = $_SERVER["REQUEST_URI"];
 		$base = explode('?', $base);
 		return hostURI() . $base[0];
 	}
-
+	
+	/*
+	 * returns the last dir shown in the uri
+	 * for example, "https://grs.ggle.com/forum/help.php?fromgroups#!forum/yiimdbs"
+	 * would return "https://grs.ggle.com/forum/"
+	 * 
+	 */
 	function currenURIDir() {
 		$base = $_SERVER["REQUEST_URI"];
 		$base = explode('?', $base);
@@ -51,6 +63,13 @@
 		}
 		return hostURI() . $base;
 	}
+	
+	/*
+	 * returns the last dir shown in the uri
+	 * for example, "https://grs.ggle.com/forum/help.php?fromgroups#!forum/yiimdbs"
+	 * would return "https://grs.ggle.com/"
+	 * 
+	 */
 
 	function hostURI() {
 		$pageURL = 'http';
@@ -66,19 +85,24 @@
 		}
 		return $pageURL;
 	}
+	
+	/*
+	 * 
+	 * 
+	 */
 
 	function addParamToURL($url, $param) {
 		// support for arrays
 		$p = strpos($url, '?');
 		
 		if (FALSE === $p) {
-			if (is_array($pa)) {				
+			if (is_array($param)) {				
 				return $url = $url . '?' . http_build_query($param);
 			} else {
 				return $url = $url . '?' . $param;
 			}
 		} else {
-			if (is_array($pa)) {				
+			if (is_array($param)) {				
 				return $url = $url . '&' . http_build_query($param);
 			} else {
 				return $url = $url . '&' . $param;
