@@ -4,8 +4,13 @@
 	
 	$path_parts = pathinfo(__FILE__);
 	define('TOOLPATH', $path_parts['dirname'] . '/'); //system based path	
-	//define('TOOLURL', currentBaseURI().'/wp-content/themes/rodrigoMaia/m_toolbox/'); //OFFLINE HTTP based path (for image manipulation)		
-	define('TOOLURL', get_bloginfo('template_url').'/m_toolbox/'); //ONLINE HTTP based path (for image manipulation)	
+	//define('TOOLURL', currentBaseURI().'/wp-content/themes/rodrigoMaia/m_toolbox/'); //OFFLINE HTTP based path (for image manipulation)	
+	if(function_exists('get_bloginfo')) {
+		//for Wordpress Template Path		
+		define('TOOLURL', get_bloginfo('template_url').'/m_toolbox/'); //ONLINE HTTP based path (for image manipulation)	
+	} else {
+		define('TOOLURL', TOOLPATH); //ONLINE HTTP based path (for image manipulation)	
+	}
 	
 	//Required for Google TinyURL
 	define('GOOGLE_API_KEY', 'AIzaSyBLxv3xZgvL-MyMHGCupCydYMnuUsrCU14');
