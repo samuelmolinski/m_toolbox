@@ -22,15 +22,15 @@
 	define('CROP_ZC', 1);
 	
 	//required for Facebook apps (Like Box, Comment Box)
-	define('FB_ID', '484903678202954');
-	define('FB_ADMINS', '100002548638400,100001690880856,519928988');
+	define('FB_ID', '');
+	define('FB_ADMINS', '');
 	define('FB_SECRET', '');
 	define('FB_APP_URL', '');
 	define('FB_BASEURL', '');
 	
 	// OG defaults settings 
-	define('OG_TITLE', 'Rodrigo Maia 25');
-	define('OG_DESCRIPTION', 'Um novo jeito de fazer pensando em você.');
-	define('OG_URL', 'http://www.rodrigomaia25.com.br/');
+	define('OG_TITLE', '');
+	define('OG_DESCRIPTION', '');
+	define('OG_URL', '');
 	define('OG_TYPE', 'website');
-	define('OG_IMAGE', 'http://www.rodrigomaia25.com.br/wp-content/themes/rodrigoMaia/library/images/RM-Facebook.png');
+	define('OG_IMAGE', '');
