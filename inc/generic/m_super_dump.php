@@ -1,9 +1,10 @@
 <?php
 	//function inspect($var) { d($var); }
+	if(!defined(m_debug)) {define('m_debug', 1);}
 
 
 	function d($var) {
-		if (TRUE) {
+		if (m_debug) {
 			
 			$bt = debug_backtrace();
 			$src = file($bt[0]["file"]);

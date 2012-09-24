@@ -11,6 +11,8 @@
 	} else {
 		define('TOOLURL', TOOLPATH); //ONLINE HTTP based path (for image manipulation)	
 	}
+	//Debug global toggle
+	define('m_debug', 1);
 	
 	//Required for Google TinyURL
 	define('GOOGLE_API_KEY', 'AIzaSyBLxv3xZgvL-MyMHGCupCydYMnuUsrCU14');
