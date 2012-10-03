@@ -17,6 +17,9 @@
 	 * 
 	 * 
 	 */
+	//settings to customize for each installation
+	require_once ('config.php');
+	
 	//useful for the confige file
 	include ('inc/generic/m_uri.php'); // URI manipulation
 	include ('inc/generic/m_css.php'); // css functions (valid selector name etc)
@@ -26,8 +29,7 @@
 	include ('inc/generic/m_cookie.php'); // cookie get, set, remove, cookie array 
 	include ('inc/generic/m_video.php'); // various video manipulation for youtube 
 	
-	//settings to customize for each installation
-	require_once ('config.php');
+	
 	
 	//comment out to not include WordPress specific functions
 	include ('inc/m_wp.php'); //handles post based functions

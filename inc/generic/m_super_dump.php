@@ -1,6 +1,6 @@
 <?php
 	//function inspect($var) { d($var); }
-	if(!defined(m_debug)) {define('m_debug', 1);}
+	if(!defined('m_debug')) {define('m_debug', 1);}
 
 
 	function d($var) {
